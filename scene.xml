@@ -1,0 +1,25 @@
+<mujoco model="xarm6_nmpc_demo">
+  <include file="xarm6.xml"/>
+
+  <statistic center="0.2 0 0.4" extent="0.8"/>
+
+  <visual>
+    <headlight diffuse="0.7 0.7 0.7" ambient="0.35 0.35 0.35" specular="0.1 0.1 0.1"/>
+    <rgba haze="0.12 0.18 0.24 1"/>
+    <global azimuth="150" elevation="-20"/>
+  </visual>
+
+  <worldbody>
+    <light pos="0 0 1.8" dir="0 0 -1" directional="true"/>
+    <body name="obstacle_mocap" mocap="true" pos="0.35 0.12 0.38">
+      <geom
+        name="obstacle_capsule"
+        type="capsule"
+        size="0.06 0.12"
+        rgba="0.94 0.53 0.18 0.85"
+        contype="0"
+        conaffinity="0"
+      />
+    </body>
+  </worldbody>
+</mujoco>
